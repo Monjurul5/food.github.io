@@ -1,0 +1,701 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+body
+{
+    position: relative;
+    overflow-x: hidden;
+}
+.main
+{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main .mainBg
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.45;
+}
+.main .heading
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100000000;
+    transition: 0.5s;
+}
+.main .heading.sticky
+{
+    background: #fff;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+.main .heading .title
+{
+    position: relative;
+    font-size: 3.5em;
+    font-weight: 800;
+    color: #fff;
+    cursor: pointer;
+}
+.main .heading.sticky .title
+{
+    color: #000;
+}
+.main .heading ul
+{
+    position: relative;
+    display: flex;
+}
+
+.main .heading ul li
+{
+    position: relative;
+    list-style: none;
+    padding: 0 40px;
+}
+.main .heading ul li a
+{
+    position: relative;
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.main .heading.sticky ul li a
+{
+    color: #000;
+}
+.main .heading ul li:hover a
+{
+    color: #dc0a6b;
+}
+.main .content
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main .content .contentTitle
+{
+    position: relative;
+    font-size: 8em;
+    font-weight: 900;
+    color: #fff;
+    text-align: center;
+}
+.main .content .contentInfo
+{
+    position: relative;
+    width: 60%;
+    font-size: 1.5em;
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+}
+.main .content .menuBtn
+{
+    position: relative;
+    background: #dc0a6b;
+    padding: 10px 30px;
+    font-size: 1.8em;
+    letter-spacing: 3px;
+    font-weight: 500;
+    color: #fff;
+    margin-top: 50px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.main .content .menuBtn:hover
+{
+    letter-spacing: 10px;
+}
+
+.about
+{
+    position: relative;
+    padding: 200px 180px ;
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.about .details
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.about .details .aboutTitle
+{
+    position: relative;
+    font-size: 4em;
+    color: #000;
+    font-weight: 300;
+}
+.about .details .aboutInfo
+{
+    position: relative;
+    font-size: 1.5em;
+    color: #000;
+    font-weight: 500;
+    width: 100%;
+}
+.about .aboutImg
+{
+    width: 40%;
+    background: url('images/about-img.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.menu
+{
+    position: relative;
+    padding: 200px 180px ;
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+.menu .menuTitle
+{
+    position: relative;
+    font-size: 4em;
+    color: #000;
+    font-weight: 300;
+}
+.menu .menuInfo
+{
+    position: relative;
+    font-size: 1.5em;
+    color: #000;
+    font-weight: 500;
+    text-align: center;
+}
+.menu .divBox
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.menu .card
+{
+    position: relative;
+    width: 500px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 60px 100px;
+    box-shadow: 0 30px 50px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: 0.5s;
+}
+.menu .card:hover .imgBx .foodImg
+{
+    transform: scale(1.2);
+}
+.menu .card .imgBx
+{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: #000;
+    overflow: hidden;
+}
+.menu .card .imgBx .foodImg
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+}
+.menu .card .foodTitle
+{
+    position: relative;
+    font-size: 1.5em;
+    color: #000;
+    font-weight: 500;
+}
+.menu .foodBtn
+{
+    position: relative;
+    background: #dc0a6b;
+    padding: 10px 30px;
+    font-size: 1.8em;
+    letter-spacing: 3px;
+    font-weight: 500;
+    color: #fff;
+    margin-top: 50px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.menu .foodBtn:hover
+{
+    letter-spacing: 10px;
+}
+.expert
+{
+    position: relative;
+    padding: 200px 180px ;
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+.expert .expertTitle
+{
+    position: relative;
+    font-size: 4em;
+    color: #000;
+    font-weight: 300;
+    text-align: center;
+}
+.expert .expertInfo
+{
+    position: relative;
+    font-size: 1.5em;
+    color: #000;
+    font-weight: 500;
+    text-align: center;
+}
+.expert .expertDivBox
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.expert .cardExperts
+{
+    position: relative;
+    width: 500px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 20px;
+    box-shadow: 0 30px 50px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: 0.5s;
+}
+.expert .cardExperts:hover
+{
+    transform: translateY(-10px);
+    box-shadow: 0 50px 50px rgba(0,0,0,0.1);
+}
+
+.expert .cardExperts .imgBx
+{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: #000;
+}
+.expert .cardExperts .imgBx .expertImg
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.expert .cardExperts .expertTitle
+{
+    position: relative;
+    font-size: 1.5em;
+    color: #000;
+    font-weight: 500;
+}
+.testimonial
+{
+    position: relative;
+    padding: 200px 180px ;
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    background: url('images/testimonial-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.testimonial .testimTitle
+{
+    position: relative;
+    font-size: 4em;
+    color: #fff;
+    font-weight: 300;
+    text-align: center;
+}
+.testimonial .testimInfo
+{
+    position: relative;
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+}
+.testimonial .testimCards
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.testimonial .testimCard
+{
+    position: relative;
+    width: 600px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px;
+    box-shadow: 0 30px 50px rgba(0,0,0,0.1);
+    padding: 60px;
+    background: #fff;
+    transition: 0.5s;
+}
+.testimonial .testimCard:hover
+{
+    transform: translateY(-10px);
+    box-shadow: 0 50px 50px rgba(0,0,0,0.1);
+}
+.testimonial .testimCard .testimImg
+{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.testimonial .testimCard .testimDetails
+{
+    position: relative;
+    font-size: 1.5em;
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+}
+.testimonial .testimCard .famous
+{
+    position: relative;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #dc0a6b;
+}
+.message
+{
+    position: relative;
+    padding: 200px 180px ;
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    background: url('images/tomato.png');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 85% 50%;
+}
+.message .messageTitle
+{
+    position: relative;
+    font-size: 4em;
+    color: #000;
+    font-weight: 300;
+    text-align: center;
+}
+.message .messageInfo
+{
+    position: relative;
+    font-size: 1.5em;
+    color: #000;
+    font-weight: 500;
+    text-align: center;
+}
+.message .messageDiv
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 50px;
+}
+.message .messageDiv .msgBx
+{
+    position: relative;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 50px;
+    background: #fff;
+    box-shadow: 0 30px 50px rgba(0,0,0,0.1);
+}
+.message .messageDiv .msgBx .msgTitle
+{
+    position: relative;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #000;
+}
+.message .messageDiv .msgBx form
+{
+    position: relative;
+    width: 100%;
+}
+.message .messageDiv .msgBx form input
+{
+    position: relative;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: 400;
+    border: 1px solid rgba(0,0,0,0.5);
+    outline: none;
+    margin: 20px 0;
+}
+.message .messageDiv .msgBx form textarea
+{
+    position: relative;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: 400;
+    border: 1px solid rgba(0,0,0,0.5);
+    outline: none;
+    margin: 20px 0;
+    min-height: 200px;
+}
+.message .messageDiv .msgBx .menuBtn
+{
+    position: relative;
+    background: #dc0a6b;
+    padding: 10px 30px;
+    font-size: 1.5em;
+    letter-spacing: 3px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.copyright
+{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 1.7em;
+    font-weight: 400;
+    color: #000;
+    margin: 20px 0;
+}
+@media(max-width: 991px)
+{
+    .main .heading
+    {
+        padding: 10px 40px;
+    }
+    .main .heading ul
+    {
+        display: none;
+    }
+    .main .heading ul.active
+    {
+        width: 100%;
+        height: calc(100% - 100px);
+        position: fixed;
+        top: 100px;
+        left: 0;
+        background: #fff;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .main .heading ul.active li a
+    {  
+        font-size: 2.5em;
+        display: inline-block;
+        color: #000;
+        padding: 10px 0;
+    }
+    .main .heading ul.active li:hover a
+    {
+        color: #dc0a6b;
+    }
+    .toggleMenu
+    {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        background: url('images/menu.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: invert(1);
+    }
+    .toggleMenu.active
+    {
+        background: url('images/close.png');
+        background-size: 60%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .heading.sticky .toggleMenu
+    {
+        filter: invert(0);
+    }
+    .main .content .contentTitle
+    {
+        font-size: 4.5em;
+        text-align: center;
+    }
+    .main .content .contentInfo
+    {
+        font-size: 1.1em;
+    }
+    .main .content .menuBtn
+    {
+        margin-top: 20px;
+    }
+    .about
+    {
+        padding: 100px 40px;
+        flex-direction: column;
+    }
+    .about .details
+    {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .about .details .aboutTitle
+    {
+        font-size: 2.3em;
+    }
+    .about .details .aboutInfo
+    {
+        font-size: 1.3em;
+    }
+    .about .aboutImg
+    {
+        width: 100%;
+        height: 700px;
+    }
+    .menu
+    {
+        padding: 100px 40px;
+    }
+    .menu .menuTitle
+    {
+        text-align: center;
+        font-size: 3em;
+    }
+    .menu .menuInfo
+    {
+        font-size: 1.1em;
+    }
+    .menu .card
+    {
+        margin: 20px 0;
+    }
+    .expert
+    {
+        padding: 100px 40px;
+    }
+    .expert .expertTitle
+    {
+        font-size: 3em;
+    }
+    .expert .expertInfo
+    {
+        font-size: 1.1em;
+    }
+    .expert .cardExperts
+    {
+        margin: 20px 0;
+    }
+    .testimonial
+    {
+        padding: 100px 40px;
+    }
+    .testimonial .testimTitle
+    {
+        font-size: 3em;
+    }
+    .testimonial .testimInfo
+    {
+        font-size: 1.1em;
+    }
+    .testimonial .testimCard
+    {
+        margin: 30px 0;
+        padding: 20px;
+    }
+    .testimonial .testimCard .testimDetails
+    {
+        font-size: 1.4em;
+    }
+    .message
+    {
+        padding: 100px 40px;
+        background: #fff;
+    }
+    .message .messageTitle
+    {
+        font-size: 3em;
+    }
+    .message .messageInfo
+    {
+        font-size: 1.1em;
+    }
+    .copyright
+    {
+        font-size: 1em;
+    }
+}
